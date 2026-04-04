@@ -1,2 +1,3 @@
 # web-chat-app
-Aplicacion para chat
+
+Fully functional chat messenger web application
