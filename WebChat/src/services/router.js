@@ -1,3 +1,4 @@
+import RegistroPage from "../pages/register.js";
 const Router = {
     init: () => {
         //console.log("Running");
@@ -19,27 +20,35 @@ const Router = {
             history.pushState({route}, null, route);
         }
 
-        let el = createElement("h1");
+        let el;
 
         switch(route){
             case "/registro":
-                el.textContent = "Registro";
+                el = RegistroPage();
                 break;
             case "/login":
+                el = document.createElement("h1");
                 el.textContent = "Login";
                 break;
             case "/chat":
+                el = document.createElement("h1");
                 el.textContent = "Chat";
                 break;
-            case "perfil":
+            case "/perfil":
+                el = document.createElement("h1");
                 el.textContent = "Perfil"
                 break;
             case "/ajustes":
+                el = document.createElement("h1");
                 el.textContent = "Ajustes"
                 break;
             
             
             
+        }
+
+        if(el){
+            document.querySelector("#contenido").appendChild(el);
         }
     },
 }
